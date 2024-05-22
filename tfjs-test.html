@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      async function main() {
+        const myArr = [
+          [1, 2],
+          [3, 4],
+        ];
+        const shape = [2, 2];
+        const tensorA = tf.tensor(myArr, shape);
+        const data = await tensorA.data();
+        const array = await tensorA.array();
+        console.log("data", data);
+        console.log("array", array);
+      }
+
+      main();
+    </script>
+  </body>
+</html>
